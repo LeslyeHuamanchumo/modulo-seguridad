@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Listado de usuarios</title>
+    </head>
+    <body>
+        <h1>A continuación se lista todos los usuarios</h1>
+        <h1 th:if="${lstusers.isEmpty()}">No hay usuarios registrados.</h1>
+        <table th:if="${lstusers.size()>0}"> <!--Esta tabla se va a crear siempre y cuando la condición sea verdadera-->
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Fecha de Nacimiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user: ${lstusers}"> <!--Estoy diciendo que cree una fila por cada user que encuentre en lstusers. Cada objeto de la lista lo voy a almacenar en la variable "user"-->
+                    <td th:text="${user.getName()}"></td>
+                    <td th:text="${user.getLastname()}"></td>
+                    <td th:text="${user.getEmail()}"></td>
+                    <td th:text="${user.getBirthday().toString()}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

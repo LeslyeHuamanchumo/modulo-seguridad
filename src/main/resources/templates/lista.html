@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!--Estamos diciendo que esta vista está utilizando thymeleaf. Es una forma de inicializar-->
+  <head>
+    <meta charset="UTF-8">
+    <title>Hola Mundo</title>
+  </head>
+  <body>
+    <h1>Hello Spring!</h1>
+    <!--Obtenemos la informacion de nuestro controlador-->
+    <!--Nos va a mostrar cuántos elementos tiene la lista-->
+    <h2 th:text="'El tamaño de la lista es: ' + ${list.size()}"></h2> <!--Entre llaves ponemos el identificador. qué objeto Le estoy pasando? Le estoy pasando una cadena-->
+    <h3 th:text="'El nombre es: ' + ${name}"></h3>
+  </body>
+</html>

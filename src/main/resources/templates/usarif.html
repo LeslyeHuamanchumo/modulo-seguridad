@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!--Estamos diciendo que esta vista está utilizando thymeleaf. Es una forma de inicializar-->
+  <head>
+    <meta charset="UTF-8">
+    <title>Hola Mundo</title>
+  </head>
+  <body>
+    <h1>Hello Spring!</h1>
+
+    <!--Tenemos 2 datos en nuestra lista. Por lo tanto, nos debe mostrar que "Existen datos"-->
+    <div th:if="${list.size()>0}">Existen datos</div>
+    <div th:if="${list.size()<=0}">No existen datos</div>
+
+  </body>
+</html>

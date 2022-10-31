@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!--Estamos diciendo que esta vista está utilizando thymeleaf. Es una forma de inicializar-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Hola Mundo</title>
+    </head>
+    <body>
+        <h1>Hello Spring!</h1>
+        <!--Obtenemos la informacion de nuestro controlador-->
+        <h2 th:text="${name}"></h2> <!--Entre llaves ponemos el identificador (alias). qué objeto Le estoy pasando? Le estoy pasando una cadena-->
+    </body>
+</html>
